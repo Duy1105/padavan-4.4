@@ -155,7 +155,7 @@ struct nvram_pair router_defaults[] = {
 
 #if BOARD_HAS_5G_RADIO
 	/* 5G Wireless parameters */
-	{ "wl_country_code", DEF_WLAN_5G_CC },		/* Country Code (default obtained from driver) */
+	{ "wl_country_code", "US" },		/* Ép phân vùng Mỹ để tăng công suất phát */
 	{ "wl_ssid", DEF_WLAN_5G_SSID },		/* Service set ID (network name) */
 #if defined(BOARD_HAS_5G_11AX) && BOARD_HAS_5G_11AX
 	{ "wl_gmode", "5" },			/* A/N/AC/AX Mixed */
@@ -264,7 +264,7 @@ struct nvram_pair router_defaults[] = {
 
 #if BOARD_HAS_2G_RADIO
 	/* 2G Wireless parameters */
-	{ "rt_country_code", DEF_WLAN_2G_CC },
+	{ "rt_country_code", "US" },		/* Ép phân vùng Mỹ để tăng công suất phát */
 	{ "rt_ssid", DEF_WLAN_2G_SSID },
 #if defined(BOARD_HAS_2G_11AX) && BOARD_HAS_2G_11AX
 	{ "rt_gmode", "6" },			/* b/g/n/ax mixed */
@@ -283,7 +283,7 @@ struct nvram_pair router_defaults[] = {
 	{ "rt_macmode", "disabled" },
 	{ "rt_mrate", "2" },
 	{ "rt_mode", "ap" },
-	{ "rt_HT_BW", "1" },
+	{ "rt_HT_BW", "0" },			/* Cố định 20MHz chống nhiễu */
 	{ "rt_HT_EXTCHA", "1" },
 	{ "rt_HT_OpMode", "0" },
 	{ "rt_wme", "1" },
@@ -628,7 +628,7 @@ struct nvram_pair router_defaults[] = {
 	{ "ddns2_ssl", "0" },
 	{ "asusddns_tos_agreement", "0" },
 
-	{ "preferred_lang", "CN" },
+	{ "preferred_lang", "EN" },			/* Đổi mặc định sang tiếng Anh */
 
 	{ "modem_rule", "0" },
 	{ "modem_prio", "1" },
